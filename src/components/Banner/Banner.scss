@@ -1,0 +1,59 @@
+.kasa-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 223px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  
+    &__image {
+      object-fit: cover;
+      width: 100%;
+      filter: brightness(40%);
+    }
+  
+    &__text {
+      position: absolute;
+      color: white;
+      font-size: 3rem;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, .25), 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 0px 4px 4px rgba(0, 0, 0, .25);
+
+    }
+  }
+  .line-break {
+    display: inline;
+  }
+
+  @media (min-width: 769px) and (max-width: 1280px) {
+    .kasa-banner {
+      margin: 0px 2.5%;
+       height: 170px;
+
+  }
+}
+
+  @media screen and (max-width: 768px) {
+    .kasa-banner {
+      height: 111px;
+      margin: 0 20px;
+      box-shadow: none;
+      justify-content: flex-start;
+      border-radius: 10px;
+
+      &__text {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 24px;
+        max-width: 84%;
+        text-align: left;
+        margin-left: 18px;
+      }
+
+    }
+
+    .nowrap {
+      white-space: nowrap; 
+    }
+    
+  }
