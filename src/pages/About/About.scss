@@ -1,0 +1,19 @@
+.kasa-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 223px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  
+    &__image {
+      object-fit: cover;
+      width: 100%;
+      filter: brightness(40%);
+    }
+  
+    &__text {
+      display: none;
+    }
+}

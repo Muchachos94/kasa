@@ -1,0 +1,20 @@
+.kasa-rating {
+    display: flex;
+    gap: 10px;
+    font-size: 36px;
+  
+    .active {
+      color: #ff6060;
+    }
+  
+    .inactive {
+      color: #e3e3e3;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .kasa-rating {
+      gap: 6px;
+      font-size: 16px;
+    }
+  }

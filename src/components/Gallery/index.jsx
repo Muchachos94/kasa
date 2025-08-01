@@ -1,46 +1,34 @@
-import './Gallery.scss'
+import { useState } from 'react';
+import './Gallery.scss';
+import logements from '../../data/logements.json';
+import Card from '../Card';
 
 function Gallery() {
+  const [visibleCount, setVisibleCount] = useState(6);
+
+  const showMoreCards = () => {
+    setVisibleCount((prevCount) => prevCount + 6);
+  };
+
+  const visibleLogements = logements.slice(0, visibleCount);
+
   return (
-    <section className="kasa-gallery">
-      <article className="kasa-card">
-        <div className="kasa-card__image">
-        <div className="kasa-card__overlay" />
+    <>
+      <section className="kasa-gallery">
+        {visibleLogements.map((logement) => (
+          <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
+        ))}
+      </section>
+
+      {visibleCount < logements.length && (
+        <div className="kasa-gallery__button-container">
+          <button onClick={showMoreCards} className="kasa-gallery__button">
+            Afficher plus
+          </button>
         </div>
-        <h2 className="kasa-card__title">Titre de la location</h2>
-      </article>
-      <article className="kasa-card">
-      <div className="kasa-card__image">
-        <div className="kasa-card__overlay" />
-        </div>
-        <h2 className="kasa-card__title">Titre de la location</h2>
-      </article>
-      <article className="kasa-card">
-      <div className="kasa-card__image">
-        <div className="kasa-card__overlay" />
-        </div>
-        <h2 className="kasa-card__title">Titre de la location</h2>
-      </article>
-      <article className="kasa-card">
-      <div className="kasa-card__image">
-        <div className="kasa-card__overlay" />
-        </div>
-        <h2 className="kasa-card__title">Titre de la location</h2>
-      </article>
-      <article className="kasa-card">
-      <div className="kasa-card__image">
-        <div className="kasa-card__overlay" />
-        </div>
-        <h2 className="kasa-card__title">Titre de la location</h2>
-      </article>
-      <article className="kasa-card">
-      <div className="kasa-card__image">
-        <div className="kasa-card__overlay" />
-        </div>
-        <h2 className="kasa-card__title">Titre de la location</h2>
-      </article>
-    </section>
-  )
+      )}
+    </>
+  );
 }
 
-export default Gallery
+export default Gallery;

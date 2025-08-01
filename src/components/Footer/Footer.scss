@@ -12,7 +12,7 @@
   
     &__logo {
       height: 40px;
-      filter: brightness(0) invert(1); // pour que le logo devienne blanc si besoin
+      filter: brightness(0) invert(1);
     }
 
   }
@@ -28,14 +28,7 @@
     }
   }
 
-    // --- VERSION MOBILE ---
-    @media screen and (max-width: 768px) {
-    .kasa-footer {
-      padding: 4rem 2rem 2rem 2rem;
-      gap: 5px;  
 
-
-    // --- VERSION MOBILE ---
 @media screen and (max-width: 768px) {
   .kasa-footer {
     padding: 4rem 2rem 2rem 2rem;
@@ -51,5 +44,4 @@
     }
   }
 }
-    }
-    }
+    

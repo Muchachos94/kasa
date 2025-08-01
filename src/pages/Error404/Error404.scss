@@ -1,0 +1,45 @@
+.kasa-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+  
+    &__code {
+      font-size: 14rem;
+      color: #ff6060;
+      margin: 0;
+    }
+  
+    &__message {
+      font-size: 36px;
+      margin: 120px;
+      color: #ff6060;
+    }
+  
+    &__link {
+      font-size: 18px;
+      color: black;
+  
+      &:hover {
+        color: #ff6060;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      &__code {
+        font-size: 96px;
+        margin: 20px 0;
+      }
+  
+      &__message {
+        font-size: 18px;
+        margin: 120px 0;
+      }
+  
+      &__link {
+        font-size: 14px;
+      }
+    }
+  }

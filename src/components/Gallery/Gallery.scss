@@ -17,11 +17,17 @@
     height: 340px;
     width: 100%;
     cursor: pointer;
-  
-    &__image {
-      background-color: #ff6060; // temporaire si pas d’image
+
+    .kasa-card__image {
+      width: 100%;
       height: 100%;
-      border-radius: 10px;
+      overflow: hidden; 
+    }
+    
+    .kasa-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;         
     }
     &__overlay {
       position: absolute;
@@ -40,12 +46,30 @@
   
     &__title {
       position: absolute;
-      bottom: 1rem;
+      bottom: 0;
       left: 1rem;
       color: white;
       font-weight: 500;
       font-size: 18px;
-      width: 70%;
+    }
+  }
+
+  .kasa-gallery__button-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .kasa-gallery__button {
+    background-color: #ff6060;
+    color: white;
+    font-size: 20px;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #e44e4e;
     }
   }
 

@@ -1,0 +1,35 @@
+.kasa-host {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  &__name {
+    color: #ff6060;
+    text-align: right;
+    font-size: 18px;
+  }
+
+  &__image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .kasa-host {
+    gap: 8px;
+
+    &__name {
+      font-size: 14px;
+    }
+
+    &__image {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

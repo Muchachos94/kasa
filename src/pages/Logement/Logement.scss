@@ -1,0 +1,103 @@
+.kasa-logement__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  
+  .kasa-logement__left {
+    flex: 1;
+    min-width: 240px;
+  }
+  
+  .kasa-logement__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    right: 6px;
+  }
+  
+  .kasa-logement__title {
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff6060;
+    margin: 0;
+  }
+  
+  .kasa-logement__location {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  
+  .kasa-logement__collapses {
+    width: 100%;
+  }
+  .kasa-logement__collapse-container {
+    display: flex;
+    gap: 70px;
+  }
+
+  .kasa-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    margin-top: 24px; 
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .kasa-logement {
+      margin: 0 20px;
+    }
+
+    .kasa-logement__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  
+    .kasa-logement__left {
+      width: 100%;
+    }
+  
+    .kasa-logement__right {
+      width: 100%;
+      right: 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .kasa-logement__title {
+      font-size: 22px;
+      margin-bottom: 0.5rem;
+    }
+  
+    .kasa-logement__location {
+      font-size: 14px;
+    }
+  
+    .kasa-tags {
+      margin-top: 12px;
+      gap: 10px;
+    }
+  
+    .kasa-logement__collapse-container {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 8px;
+    }
+  
+    .kasa-logement__collapses {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+  .kasa-logement {
+    margin: 0 20px;
+  }
+    
+  }
