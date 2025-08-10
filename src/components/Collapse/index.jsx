@@ -14,11 +14,11 @@ function Collapse({ title, content, variant = 'default' }) {
         </span>
       </div>
 
-      {isOpen && (
-        <div className="collapse__content">
+      <div className="collapse__content">
+          <div className="collapse__inner">
           {content}
+          </div>
         </div>
-      )}
     </div>
   );
 }
